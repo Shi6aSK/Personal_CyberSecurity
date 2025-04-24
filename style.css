@@ -1,118 +1,149 @@
-/* style.css — Cybersecurity Website */
+/* style.css — Modern Redesign */
 
-/* General Reset & Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+  --bg: #fdfcfa;
+  --text: #202124;
+  --accent: #2d6cdf;
+  --alert: #f44336;
+  --safe: #4caf50;
+  --highlight: #ffca28;
+  --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  --radius: 10px;
+}
+
 body {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #011627;
-  color: #f8f9fa;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.6;
-}
-
-h1, h2, h3 {
-  font-weight: 700;
-}
-
-h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
-}
-
-p, li {
-  font-size: 1rem;
-}
-
-ul {
-  padding-left: 1.2rem;
-}
-
-header, footer {
-  background-color: #011627;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-/* Section Styling */
-.section {
-  padding: 2rem 1rem;
-  max-width: 900px;
-  margin: auto;
-  background-color: #0b2e42;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.section h2 {
-  color: #f4f4f4;
-  border-bottom: 2px solid #2a9d8f;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.danger li {
-  border-left: 4px solid #d62828;
-  padding-left: 0.75rem;
-  margin-bottom: 0.5rem;
-}
-
-.safe li {
-  border-left: 4px solid #2a9d8f;
-  padding-left: 0.75rem;
-  margin-bottom: 0.5rem;
-}
-
-.tools li, .future p, .call-to-action p {
-  margin-bottom: 0.8rem;
-}
-
-blockquote {
-  background-color: #e9ecef;
-  color: #212529;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-left: 4px solid #ffc107;
-  font-style: italic;
-}
-
-footer ul {
-  list-style: none;
+  font-size: 16px;
   padding: 0;
 }
 
-footer ul li {
-  margin: 0.4rem 0;
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--accent);
+  color: white;
 }
 
-/* Responsive Design */
+header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+section {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--accent);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  margin: 20px 0;
+  display: block;
+}
+
+blockquote {
+  font-style: italic;
+  background: #e3f2fd;
+  padding: 12px 20px;
+  border-left: 4px solid var(--accent);
+  margin: 20px 0;
+}
+
+footer {
+  background: var(--accent);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer h3 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+footer a {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.section.danger {
+  border-left: 6px solid var(--alert);
+}
+
+.section.safe {
+  border-left: 6px solid var(--safe);
+}
+
+.section.call-to-action {
+  background: var(--accent);
+  color: white;
+  text-align: center;
+}
+
+.section.call-to-action p {
+  font-size: 1.1rem;
+}
+
+.section.future img {
+  max-width: 100%;
+  margin: 0 auto 20px auto;
+  display: block;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
   body {
-    font-size: 90%;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  .section {
-    padding: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.4rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-
-  p, li {
-    font-size: 0.95rem;
+    font-size: 15px;
   }
 }
