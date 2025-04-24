@@ -1,86 +1,78 @@
-/* style.css */
+/* style.css — Cybersecurity Website */
+
+/* General Reset & Fonts */
 body {
-  font-family: 'Roboto', sans-serif;
   margin: 0;
-  background-color: #f7f9fb;
-  color: #333;
+  font-family: 'Roboto', sans-serif;
+  background-color: #011627;
+  color: #f8f9fa;
   line-height: 1.6;
 }
 
-header {
-  background-color: #011627;
-  color: white;
-  padding: 2rem;
-  text-align: center;
+h1, h2, h3 {
+  font-weight: 700;
 }
 
-header h1 {
-  font-size: 2.5rem;
+h1 {
+  font-size: 2.2rem;
   margin-bottom: 0.5rem;
 }
 
-header p {
-  font-size: 1.25rem;
+p, li {
+  font-size: 1rem;
 }
 
-.section {
-  padding: 2rem 3rem;
-  max-width: 900px;
-  margin: auto;
+ul {
+  padding-left: 1.2rem;
 }
 
-.section h2 {
-  color: #003049;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-}
-
-.section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.section ul li {
-  background: #ffffff;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-left: 6px solid #003049;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.danger ul li {
-  border-color: #d62828;
-  background: #fff0f0;
-}
-
-.safe ul li {
-  border-color: #2a9d8f;
-  background: #f0fff5;
-}
-
-.psychology {
-  background-color: #e9ecef;
-  border-top: 3px solid #6c757d;
-}
-
-blockquote {
-  font-style: italic;
-  color: #555;
-  border-left: 5px solid #6c757d;
-  padding-left: 1rem;
-  margin-left: 0;
-}
-
-footer {
+header, footer {
   background-color: #011627;
-  color: white;
-  padding: 2rem 3rem;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
-footer h3 {
-  margin-top: 1rem;
-  font-size: 1.2rem;
+/* Section Styling */
+.section {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: auto;
+  background-color: #0b2e42;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.section h2 {
+  color: #f4f4f4;
+  border-bottom: 2px solid #2a9d8f;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.danger li {
+  border-left: 4px solid #d62828;
+  padding-left: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.safe li {
+  border-left: 4px solid #2a9d8f;
+  padding-left: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.tools li, .future p, .call-to-action p {
+  margin-bottom: 0.8rem;
+}
+
+blockquote {
+  background-color: #e9ecef;
+  color: #212529;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid #ffc107;
+  font-style: italic;
 }
 
 footer ul {
@@ -89,5 +81,38 @@ footer ul {
 }
 
 footer ul li {
-  margin: 0.5rem 0;
+  margin: 0.4rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 90%;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .section {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p, li {
+    font-size: 0.95rem;
+  }
 }
